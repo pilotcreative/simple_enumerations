@@ -4,14 +4,13 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "simple_enumerations"
+    gem.name = "objectreload-simple_enumerations"
     gem.summary = %Q{Simple enumerations system for rails apps}
     gem.description = %Q{Provides simple and clean enumerations system for rails apps. Enumerations are defined in one file and stored in the database, as strings.}
-    gem.email = "wijet@wijet.pl"
-    gem.homepage = "http://github.com/wijet/simple_enumerations"
-    gem.authors = ["Mariusz Pietrzyk"]
+    gem.email = "gems@objectreload.com"
+    gem.homepage = "http://github.com/objectreload/simple_enumerations"
+    gem.authors = ["Mariusz Pietrzyk", "Mateusz Drozdzynski"]
     gem.add_development_dependency "rspec"
-#    gem.files.include FileList['lib/**/*.rb', 'rails/init.rb']
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError

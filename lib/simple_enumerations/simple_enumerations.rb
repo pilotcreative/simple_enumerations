@@ -45,8 +45,8 @@ module Wijet
           define_method("#{value.gsub(/[^[:alnum:]]/, '_')}?") { self == value }
         end unless all.blank?
 
-        def ===(object)
-          self == object.to_s
+        def ==(object)
+          super(object.to_s)
         end
       end
     end
