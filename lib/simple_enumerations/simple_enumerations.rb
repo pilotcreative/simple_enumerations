@@ -12,7 +12,7 @@ module Wijet
 
         define_method("#{name}=") do |value|
           value = value.to_s
-          unless Enumeration[name].include?(value) or value.blank?
+          unless EnumerationString::Enumeration[name].include?(value) or value.blank?
             raise ArgumentError, "'#{value}' is not a value of enumeration '#{name}'"
           end
           write_attribute(name, value)
