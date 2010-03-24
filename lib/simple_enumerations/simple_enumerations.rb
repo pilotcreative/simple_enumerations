@@ -2,11 +2,12 @@ module Wijet
   module SimpleEnumerations
     def self.included(base)
       base.extend ClassMethods
-      EnumerationString::Enumeration.setup
     end
 
     module ClassMethods
       def has_enumerated(name)
+        EnumerationString::Enumeration.setup
+
         name = name.to_s
 
         define_method("#{name}=") do |value|
@@ -55,5 +56,3 @@ module Wijet
     end
   end
 end
-
-include Wijet::SimpleEnumerations::EnumerationString
