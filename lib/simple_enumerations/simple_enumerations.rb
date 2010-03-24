@@ -6,20 +6,20 @@ module Wijet
 
     module ClassMethods
       def has_enumerated(name)
-        EnumerationString::Enumeration.setup
+        Enumeration.setup
 
         name = name.to_s
 
         define_method("#{name}=") do |value|
           value = value.to_s
-          unless EnumerationString::Enumeration[name].include?(value) or value.blank?
+          unless Enumeration[name].include?(value) or value.blank?
             raise ArgumentError, "'#{value}' is not a value of enumeration '#{name}'"
           end
           write_attribute(name, value)
         end
 
         define_method(name) do
-          EnumerationString::Enumeration.new(attributes[name])
+          Enumeration.new(attributes[name])
         end
       end
     end
@@ -56,3 +56,5 @@ module Wijet
     end
   end
 end
+
+include Wijet::SimpleEnumerations::EnumerationString

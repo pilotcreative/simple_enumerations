@@ -1,5 +1,5 @@
 class Symbol
   def ==(object)
-    object.kind_of?(Wijet::SimpleEnumerations::EnumerationString::Enumeration) ? object == self : super
+    object.kind_of?(Enumeration) ? object == self : super
   end
 end
