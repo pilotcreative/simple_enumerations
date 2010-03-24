@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{objectreload-simple_enumerations}
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mariusz Pietrzyk", "Mateusz Drozdzynski"]
-  s.date = %q{2009-12-30}
+  s.date = %q{2010-03-24}
   s.description = %q{Provides simple and clean enumerations system for rails apps. Enumerations are defined in one file and stored in the database, as strings.}
   s.email = %q{gems@objectreload.com}
   s.extra_rdoc_files = [
@@ -17,7 +17,8 @@ Gem::Specification.new do |s|
      "README.markdown"
   ]
   s.files = [
-    "LICENSE",
+    ".gitignore",
+     "LICENSE",
      "README.markdown",
      "Rakefile",
      "VERSION.yml",
@@ -29,8 +30,8 @@ Gem::Specification.new do |s|
      "lib/simple_enumerations/form_helper.rb",
      "lib/simple_enumerations/simple_enumerations.rb",
      "lib/simple_enumerations/symbol_extension.rb",
+     "objectreload-simple_enumerations.gemspec",
      "rails/init.rb",
-     "simple_enumerations.gemspec",
      "spec/app_root/app/models/group.rb",
      "spec/app_root/app/views/cars/new.html.erb",
      "spec/app_root/config/enumerations.yml",
@@ -44,7 +45,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/objectreload/simple_enumerations}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Simple enumerations system for rails apps}
   s.test_files = [
     "spec/app_root/app/models/group.rb",
