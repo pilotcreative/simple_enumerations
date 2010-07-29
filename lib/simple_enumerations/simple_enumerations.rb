@@ -44,7 +44,7 @@ module Wijet
 
           def all
             Rails.cache.fetch('_simple_enumerations_') do
-              YAML::load(File.read(File.join(RAILS_ROOT, 'config', 'enumerations.yml')))
+              YAML::load(File.read(File.join(Rails.root, 'config', 'enumerations.yml')))
             end
           end
         end
